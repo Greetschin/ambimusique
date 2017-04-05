@@ -13,9 +13,19 @@ and open the template in the editor.
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
-    <body>
-        <div>Btn Config</div>
-        <a href="html/lecture.html" data-ajax="false">Lecture</a>
-        <a href="html/config.html" data-ajax="false">Config</a>
+    <body style="background-color: red">
+        <nav style="background-color: green">
+            <button class="ui-btn ui-btn-inline" onclick="window.location.href='html/lecture.html'"> Lecture</button>
+            <button class="ui-btn ui-btn-inline" onclick="window.location.href='html/config.html'">Config</button>
+        </nav>
+        <div style="background-color: blue">
+            <img style="width: 100px ; height: 100px ; align-content: center" src="img/albumdefault.jpg" alt=""/>
+        </div>
+        <div style="background-color: pink">
+            <h2>Titre de la musique LOL</h1>
+            <button class="ui-btn ui-btn-inline" onclick="alert('BEFORE')">Before</button>
+            <button class="ui-btn ui-btn-inline" onclick="alert('Play')">Play</button>
+            <button class="ui-btn ui-btn-inline" onclick="alert('AFTER')">After</button>
+        </div>
     </body>
 </html>
