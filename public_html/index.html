@@ -10,7 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-        <script  src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script  src="https://code.jquery.com/jquery-3.2.1.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body style="background-color: red">
@@ -22,10 +22,30 @@ and open the template in the editor.
             <img style="width: 100px ; height: 100px ; align-content: center" src="img/albumdefault.jpg" alt=""/>
         </div>
         <div style="background-color: pink">
-            <h2>Titre de la musique LOL</h1>
+            <h2>Titre de la musique LOL</h2>
                 <button class="ui-btn ui-btn-inline" onclick="alert('BEFORE')">Before</button>
                 <button class="ui-btn ui-btn-inline" onclick="alert('Play')">Play</button>
                 <button class="ui-btn ui-btn-inline" onclick="alert('AFTER')">After</button>
         </div>
+        <script>
+		$(document).ready(function(){
+
+				$.ajax({
+
+					url : 'http://192.168.43.233:8080/info', // La ressource ciblée
+					type : 'GET', // Le type de la requête HTTP.
+					dataType : 'json',
+					success : function(json, statut){ // success est toujours en place, bien sûr !
+						console.log(json);
+						console.log(statut);
+					},
+					error : function(resultat, statut, erreur){
+						console.log(resultat);
+						console.log(statut);
+						console.log(erreur);
+					}
+				});
+			});
+		</script>
     </body>
 </html>
