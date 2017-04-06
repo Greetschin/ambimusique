@@ -8,16 +8,6 @@ function apiCall(url, success, error) {
         timeout: 1000
     });
 }
-function apiCallList(url, prm, success, error ) {
-    $.ajax({
-        url: 'http://192.168.43.233:8080/' + url + 'select?music=' + prm,
-        type: 'GET',
-        dataType: 'json',
-        success: success,
-        error: error,
-        timeout: 1000
-    });
-}
 $(document).ready(function(){
 
 	apiCall('info',
@@ -38,7 +28,7 @@ $(document).ready(function(){
                         result = "";
                 json.map(function (a) {
 
-                    result += '<li class="' + liClass + '">' + a + '</li>';
+                    result += '<li class="' + liClass + '"onclick="playlist(' + "'" + a + "'" + ')" >' + a + '</li>';
                 });
                 root.append(result).listview();
             },
@@ -69,7 +59,7 @@ function next() {
     });
 }
 function playlist(prmSelect) {
-    apiCall("select", prmSelect, function (json, success)  {
+    apiCall("select" + '?music=' + prmSelect, function (json, success)  {
         $('#musicTitle').html(json.musicTitle);
         $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
     });
