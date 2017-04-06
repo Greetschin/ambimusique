@@ -53,7 +53,7 @@ and open the template in the editor.
                 </div>
             </div>
             <div role="main" class="ui-content">
-                <center></center>
+				<ol id="playlist" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-listeClass="ui-li ui-li-static ui-btn-up-c"></ol>
             </div>
             <div data-role="footer" data-position="fixed">
                 <h1>Footer</h1>
@@ -79,24 +79,6 @@ and open the template in the editor.
                 <h1>Footer</h1>
             </div>
         </div>
-        <script>
-		/*$(document).ready(function(){
-
-                $.ajax({
-					url : 'http://192.168.43.233:8080/info', // La ressource ciblée
-					type : 'GET', // Le type de la requête HTTP.
-					dataType : 'json',
-					success : function(json, statut){ // success est toujours en place, bien sûr !
-						console.log(json);
-						console.log(statut);
-					},
-					error : function(resultat, statut, erreur){
-						console.log(resultat);
-						console.log(statut);
-						console.log(erreur);
-					}
-				});
-			});*/
-		</script>
+    	<script src="js/main.js"></script>
     </body>
 </html>
