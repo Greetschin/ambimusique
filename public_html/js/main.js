@@ -18,18 +18,17 @@ function apiCallList(url, prm, success, error ) {
         timeout: 1000
     });
 }
-$(document).ready(function () {
+$(document).ready(function(){
 
-    apiCall('info',
-            function (json, success) {
-                $('#musicTitle').html(json.musicTitle);
-                $('#musicStatus').removeClass('playing paused stopped').addClass(json.musicStatus);
-            },
-            function (result, status, error) {
-                console.log(result);
-                console.log(status);
-                console.log(error);
-            });
+	apiCall('info',
+	function(json,success){
+		$('#musicTitle').html(json.musicTitle);
+		$('#musicStatus').removeClass('playing paused stopped').addClass(json.musicStatus);
+	},
+	function(result, status, error){
+		console.log('error');
+	});
+>>>>>>> 50837cac0d5b7f5367a7c8bf43b8d2fc506390f0
 
 
     //Playlist
@@ -76,5 +75,3 @@ function playlist(prmSelect) {
         $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
     });
 }
-
-select?music=chop_suey.mp3
