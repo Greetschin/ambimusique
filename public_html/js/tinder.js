@@ -7,6 +7,11 @@ $(function(){
     var AlertDislike = new cAlert("you don't like it .skipping...", "danger", 2)
    $(document).on("swipeleft",".music_played",function(){
         console.log("left swiped")
+       apiCall("next", function (json, success) {
+           $('#musicTitle').html(json.musicTitle);
+           $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
+           $('#musicImage').attr("src","img/"+json.musicTitle.replace(".mp3",".png"))
+       });
        AlertDislike.alert()
     })
     $(document).on("swiperight",".music_played",function(){
