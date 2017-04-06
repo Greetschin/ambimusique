@@ -12,6 +12,7 @@ $(document).ready(function(){
 
 	apiCall('info',
 	function(json,success){
+		$('#musicImage').attr("src","img/"+ json.musicTitle.replace(".mp3",".png"))
 		$('#musicTitle').html(json.musicTitle);
 		$('#musicStatus').removeClass('playing paused stopped').addClass(json.musicStatus);
 	},
@@ -41,6 +42,7 @@ $(document).ready(function(){
 });
 function before() {
     apiCall('previous', function (json, success) {
+        $('#musicImage').attr("src","img/"+json.musicTitle.replace(".mp3",".png"))
         $('#musicTitle').html(json.musicTitle);
         $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
 
@@ -50,17 +52,20 @@ function playing() {
     apiCall('toggle', function (json, success) {
         $('#musicTitle').html(json.musicTitle);
         $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
+        $('#musicImage').attr("src","img/"+json.musicTitle.replace(".mp3",".png"))
     });
 }
 function next() {
     apiCall("next", function (json, success) {
         $('#musicTitle').html(json.musicTitle);
         $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
+        $('#musicImage').attr("src","img/"+json.musicTitle.replace(".mp3",".png"))
     });
 }
 function playlist(prmSelect) {
     apiCall("select" + '?music=' + prmSelect, function (json, success)  {
         $('#musicTitle').html(json.musicTitle);
         $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
+        $('#musicImage').attr("src","img/"+json.musicTitle.replace(".mp3",".png"))
     });
 }
