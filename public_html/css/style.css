@@ -3,10 +3,10 @@
 	background-size: cover;
 	width: 60px;
 	height: 60px;
-        border: aqua solid 1px ;
+	filter: invert(20%);
 }
 
 .icon-player.before {background-position: 0% 0;}
 .icon-player.pause {background-position: 33.333% 0;}
 .icon-player.next {background-position: 66.666% 0;}
-.icon-player.play {background-position: 100% 0;}
+.icon-player.playing {background-position: 100% 0;}

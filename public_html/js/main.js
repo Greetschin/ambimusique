@@ -1,47 +1,44 @@
-function Lecture() {
-
+function apiCall(url, success, error){
+	$.ajax({
+		url : 'http://192.168.43.233:8080/'+url,
+		type : 'GET',
+		dataType : 'json',
+		success : success,
+		error : error,
+		timeout: 1000
+	});
 }
-
-console.log('toto');
 
 $(document).ready(function(){
 
-	/*$.ajax({
-		url : 'http://192.168.43.233:8080/info', // La ressource ciblée
-		type : 'GET', // Le type de la requête HTTP.
-		dataType : 'json',
-		success : function(json, statut){ // success est toujours en place, bien sûr !
-			console.log(json);
-			console.log(statut);
-		},
-		error : function(resultat, statut, erreur){
-			console.log(resultat);
-			console.log(statut);
-			console.log(erreur);
-		}
-	});*/
+	apiCall('info',
+	function(json,success){
+		$('#musicTitle').html(json.musicTitle);
+		$('#musicStatus').removeClass('playing pause stop').addClass(json.musicStatus);
+	},
+	function(result, status, error){
+		console.log(result);
+		console.log(status);
+		console.log(error);
+	});
+
 
 	//Playlist
-	$.ajax({
-		url : 'http://192.168.43.233:8080/musics',
-		type : 'GET',
-		dataType : 'json',
-		success : function(json, statut){
-			var root = $('#playlist'),
-				liClass = root.attr('data-listeClass'),
-				result = "";
-			json.map(function(a){
+	apiCall('musics',
+	function(json, statut){
+		var root = $('#playlist'),
+			liClass = root.attr('data-listeClass'),
+			result = "";
+		json.map(function(a){
 
-				result += '<li class="'+liClass+'">'+a+'</li>';
-			});
-			root.append(result).listview();
-		},
-		error : function(resultat, statut, erreur){
-						var root = $('#playlist'),
-				liClass = root.attr('data-listeClass'),
-				result = '<li class="'+liClass+'">Aucune musique</li>';
-			root.append(result).listview();
-			console.log(erreur);
-		}
+			result += '<li class="'+liClass+'">'+a+'</li>';
+		});
+		root.append(result).listview();
+	},
+	function(resultat, statut, erreur){
+		var root = $('#playlist'),
+		liClass = root.attr('data-listeClass'),
+		result = '<li class="'+liClass+'">Aucune musique</li>';
+		root.append(result).listview();
 	});
 });
