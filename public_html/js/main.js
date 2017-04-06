@@ -14,7 +14,7 @@ $(document).ready(function(){
 	apiCall('info',
 	function(json,success){
 		$('#musicTitle').html(json.musicTitle);
-		$('#musicStatus').removeClass('playing pause stop').addClass(json.musicStatus);
+		$('#musicStatus').removeClass('playing paused stopped').addClass(json.musicStatus);
 	},
 	function(result, status, error){
 		console.log(result);

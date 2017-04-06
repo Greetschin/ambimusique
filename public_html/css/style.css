@@ -7,6 +7,7 @@
 }
 
 .icon-player.before {background-position: 0% 0;}
-.icon-player.pause {background-position: 33.333% 0;}
+.icon-player.paused {background-position: 33.333% 0;}
 .icon-player.next {background-position: 66.666% 0;}
 .icon-player.playing {background-position: 100% 0;}
+.icon-player.stopped {background-position: 20% 0;}
