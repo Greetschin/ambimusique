@@ -17,9 +17,7 @@ $(document).ready(function(){
 		$('#musicStatus').removeClass('playing paused stopped').addClass(json.musicStatus);
 	},
 	function(result, status, error){
-		console.log(result);
-		console.log(status);
-		console.log(error);
+		console.log('error');
 	});
 
 
