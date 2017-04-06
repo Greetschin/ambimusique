@@ -16,14 +16,8 @@ and open the template in the editor.
     <body>
         <div data-role="page" id="page1">
             <div data-role="header" style="overflow:hidden;">
-                <h1>Page 1</h1>
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#" class="ui-btn-active">One</a></li>
-                        <li><a href="#page2">Two</a></li>
-                        <li><a href="#page3">Three</a></li>
-                    </ul>
-                </div>
+                <h1>Ambimusique</h1>
+                <a href="#page2" data-icon="bullets" class="ui-btn-right">Playlist</a>
             </div>
             <div role="main" class="ui-content">
                 <center>
@@ -49,23 +43,19 @@ and open the template in the editor.
 
         <div data-role="page" id="page2">
             <div data-role="header" style="overflow:hidden;">
-                <h1>Page 2</h1>
+                <h1>Playlist</h1>
+                <a href="#page1" data-icon="back" class="ui-btn-left">Player</a>
+                <a href="#page3" data-icon="gear" class="ui-btn-right">Options</a>
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#page1">One</a></li>
-                        <li><a href="#" class="ui-btn-active">Two</a></li>
-                        <li><a href="#page3">Three</a></li>
+                        <li><a href="#" class="ui-btn-active">Titres</a></li>
+                        <li><a href="#">Genres</a></li>
+                        <li><a href="#">Artistes</a></li>
                     </ul>
                 </div>
             </div>
             <div role="main" class="ui-content">
-                <center>
-                    <nav>Mes Musiques</nav>
-                    <button class="ui-btn ui-btn-inline">Titre</button>
-                    <button class="ui-btn ui-btn-inline">Genre</button>
-                    <button class="ui-btn ui-btn-inline">Artiste</button>
-
-                </center>
+                <center></center>
             </div>
             <div data-role="footer" data-position="fixed">
                 <h1>Footer</h1>
@@ -73,14 +63,8 @@ and open the template in the editor.
         </div>
         <div data-role="page" id="page3">
             <div data-role="header" style="overflow:hidden;">
-                <h1>Page 3</h1>
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#page1">One</a></li>
-                        <li><a href="#page2">Two</a></li>
-                        <li><a href="#" class="ui-btn-active">Three</a></li>
-                    </ul>
-                </div>
+                <h1>Options</h1>
+                <a href="#page2" data-icon="back" class="ui-btn-left">Playlist</a>
             </div>
             <div role="main" class="ui-content">
                 <center>
@@ -98,24 +82,23 @@ and open the template in the editor.
             </div>
         </div>
         <script>
-            $(document).ready(function () {
+		/*$(document).ready(function(){
 
                 $.ajax({
-
-                    url: 'http://192.168.43.233:8080/info', // La ressource ciblée
-                    type: 'GET', // Le type de la requête HTTP.
-                    dataType: 'json',
-                    success: function (json, statut) { // success est toujours en place, bien sûr !
-                        console.log(json);
-                        console.log(statut);
-                    },
-                    error: function (resultat, statut, erreur) {
-                        console.log(resultat);
-                        console.log(statut);
-                        console.log(erreur);
-                    }
-                });
-            });
-        </script>
+					url : 'http://192.168.43.233:8080/info', // La ressource ciblée
+					type : 'GET', // Le type de la requête HTTP.
+					dataType : 'json',
+					success : function(json, statut){ // success est toujours en place, bien sûr !
+						console.log(json);
+						console.log(statut);
+					},
+					error : function(resultat, statut, erreur){
+						console.log(resultat);
+						console.log(statut);
+						console.log(erreur);
+					}
+				});
+			});*/
+		</script>
     </body>
 </html>
