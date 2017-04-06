@@ -1,11 +1,12 @@
 .icon-player {
 	background-image: url(../img/icon-player.svg);
 	background-size: cover;
-	width: 20px;
-	height: 20px;
+	width: 60px;
+	height: 60px;
+        border: aqua solid 1px ;
 }
 
-.icon-player.before {background-position: 0px 0px;}
-.icon-player.pause {background-position: 20px 0px;}
-.icon-player.next {background-position: 40px 0px;}
-.icon-player.play {background-position: 60px 0px;}
+.icon-player.before {background-position: 0% 0;}
+.icon-player.pause {background-position: 33.333% 0;}
+.icon-player.next {background-position: 66.666% 0;}
+.icon-player.play {background-position: 100% 0;}
