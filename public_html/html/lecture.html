@@ -13,10 +13,20 @@ and open the template in the editor.
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body>
-        <nav>Mes Musiques</nav>
-        <button class="ui-btn ui-btn-inline">Titre</button>
-        <button class="ui-btn ui-btn-inline">Genre</button>
-        <button class="ui-btn ui-btn-inline">Artiste</button>
-        <div></div>
+
+        <div data-role="page">
+            <div data-role="header" >
+                <h1>Header</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <nav>Mes Musiques</nav>
+                <button class="ui-btn ui-btn-inline">Titre</button>
+                <button class="ui-btn ui-btn-inline">Genre</button>
+                <button class="ui-btn ui-btn-inline">Artiste</button>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>FOoter</h1>
+            </div>
+        </div>
     </body>
 </html>
