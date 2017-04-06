@@ -23,16 +23,15 @@ and open the template in the editor.
             <div role="main" class="ui-content">
                 <center>
                     <div>
-                        <img style="width: 100px ; height: 100px ; align-content: center" src="img/albumdefault.jpg" alt=""/>
+                        <img style="width: 100%;align-content: center;" src="img/albumdefault.jpg" alt=""/>
                     </div>
                 </center>
             </div>
             <div data-role="footer" data-position="fixed">
                 <center>
-                    <h2>Titre de la musique LOL</h2>
-
+                    <h2 id="musicTitle">Titre de la musique LOL</h2>
                     <div class="ui-btn-inline icon-player before" onclick="alert('BEFORE')"></div>
-                    <div class="ui-btn-inline icon-player pause " onclick="alert('pause')"></div>
+                    <div id="musicStatus" class="ui-btn-inline icon-player playing " onclick="alert('play')"></div>
                     <div class="ui-btn-inline icon-player next" onclick="alert('next')"></div>
 
                 </center>
