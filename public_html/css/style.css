@@ -1,0 +1,11 @@
+.icon-player {
+	background-image: url(../img/icon-player.svg);
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+}
+
+.icon-player.before {background-position: 0px 0px;}
+.icon-player.pause {background-position: 20px 0px;}
+.icon-player.next {background-position: 40px 0px;}
+.icon-player.play {background-position: 60px 0px;}
