@@ -13,7 +13,6 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/style.css"/>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script src="JS/JS.js" type="text/javascript"></script>
     </head>
     <body>
         <div data-role="page" id="page1">
@@ -28,20 +27,17 @@ and open the template in the editor.
                     </div>
                     <div>
                         <h2>Titre de la musique LOL</h2>
-
-                        
-                        <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l" onclick="before()">carat-l</button>
-                        <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-clock" onclick="before()">clock</button>
-                        <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-r" onclick="before()">carat-r</button>
-                        <button class="ui-btn ui-btn-inline" onclick="alert('BEFORE')">Before</button>
-                        <button class="ui-btn ui-btn-inline" onclick="alert('Play')">Play</button>
-                        <button class="ui-btn ui-btn-inline" onclick="alert('AFTER')">After</button>
-                        <div class="icon-player play"></div>
                     </div>
                 </center>
             </div>
             <div data-role="footer" data-position="fixed">
-                <h1>Footer</h1>
+                <center>
+                <div class="ui-btn-inline icon-player before" onclick="alert('BEFORE')"></div>
+                <div class="ui-btn-inline icon-player pause" onclick="alert('pause')"></div>
+                <div class="ui-btn-inline icon-player play " onclick="alert('play')"></div>
+                <div class="ui-btn-inline icon-player next" onclick="alert('next')"></div>
+                
+                </center>
             </div>
         </div>
 
@@ -86,23 +82,23 @@ and open the template in the editor.
             </div>
         </div>
         <script>
-		/*$(document).ready(function(){
-
-                $.ajax({
-					url : 'http://192.168.43.233:8080/info', // La ressource ciblée
-					type : 'GET', // Le type de la requête HTTP.
-					dataType : 'json',
-					success : function(json, statut){ // success est toujours en place, bien sûr !
-						console.log(json);
-						console.log(statut);
-					},
-					error : function(resultat, statut, erreur){
-						console.log(resultat);
-						console.log(statut);
-						console.log(erreur);
-					}
-				});
-			});*/
-		</script>
+            /*$(document).ready(function(){
+             
+             $.ajax({
+             url : 'http://192.168.43.233:8080/info', // La ressource ciblée
+             type : 'GET', // Le type de la requête HTTP.
+             dataType : 'json',
+             success : function(json, statut){ // success est toujours en place, bien sûr !
+             console.log(json);
+             console.log(statut);
+             },
+             error : function(resultat, statut, erreur){
+             console.log(resultat);
+             console.log(statut);
+             console.log(erreur);
+             }
+             });
+             });*/
+        </script>
     </body>
 </html>
