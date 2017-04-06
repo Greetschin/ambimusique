@@ -10,22 +10,70 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-        <script  src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
-    <body style="background-color: red">
-        <nav style="background-color: green">
-            <button class="ui-btn ui-btn-inline" onclick="window.location.href = 'html/lecture.html'"> Lecture</button>
-            <button class="ui-btn ui-btn-inline" onclick="window.location.href = 'html/config.html'">Config</button>
-        </nav>
-        <div style="background-color: blue">
-            <img style="width: 100px ; height: 100px ; align-content: center" src="img/albumdefault.jpg" alt=""/>
+    <body>
+        <div data-role="page" id="page1">
+        	<div data-role="header" style="overflow:hidden;">
+				<h1>Page 1</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" class="ui-btn-active">One</a></li>
+						<li><a href="#page2">Two</a></li>
+						<li><a href="#page3">Three</a></li>
+					</ul>
+				</div>
+			</div>
+            <div role="main" class="ui-content">
+                <center>
+                    page 1
+                </center>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer</h1>
+            </div>
         </div>
-        <div style="background-color: pink">
-            <h2>Titre de la musique LOL</h2>
-                <button class="ui-btn ui-btn-inline" onclick="alert('BEFORE')">Before</button>
-                <button class="ui-btn ui-btn-inline" onclick="alert('Play')">Play</button>
-                <button class="ui-btn ui-btn-inline" onclick="alert('AFTER')">After</button>
+
+        <div data-role="page" id="page2">
+            <div data-role="header" style="overflow:hidden;">
+				<h1>Page 2</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1">One</a></li>
+						<li><a href="#" class="ui-btn-active">Two</a></li>
+						<li><a href="#page3">Three</a></li>
+					</ul>
+				</div>
+			</div>
+            <div role="main" class="ui-content">
+                <center>
+                    page 2
+                </center>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer</h1>
+            </div>
+        </div>
+        <div data-role="page" id="page3">
+			<div data-role="header" style="overflow:hidden;">
+				<h1>Page 3</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1">One</a></li>
+						<li><a href="#page2">Two</a></li>
+						<li><a href="#" class="ui-btn-active">Three</a></li>
+					</ul>
+				</div>
+			</div>
+            <div role="main" class="ui-content">
+                <center>
+                    page 3
+                </center>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer</h1>
+            </div>
         </div>
         <script>
 		$(document).ready(function(){
