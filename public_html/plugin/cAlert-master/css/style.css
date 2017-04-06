@@ -11,7 +11,9 @@
 	
 	z-index: 1000;
 }
-
+#musicImage{
+  max-width: 400px;
+}
 .cAlert-queue-count {
 	position: absolute;
 	right: 40px;
