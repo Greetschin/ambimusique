@@ -33,12 +33,14 @@ $(document).ready(function(){
 			json.map(function(a){
 
 				result += '<li class="'+liClass+'">'+a+'</li>';
-
-				//console.log(a);
 			});
 			root.append(result).listview();
 		},
 		error : function(resultat, statut, erreur){
+						var root = $('#playlist'),
+				liClass = root.attr('data-listeClass'),
+				result = '<li class="'+liClass+'">Aucune musique</li>';
+			root.append(result).listview();
 			console.log(erreur);
 		}
 	});
