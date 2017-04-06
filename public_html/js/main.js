@@ -28,7 +28,6 @@ $(document).ready(function(){
 	function(result, status, error){
 		console.log('error');
 	});
->>>>>>> 50837cac0d5b7f5367a7c8bf43b8d2fc506390f0
 
 
     //Playlist
