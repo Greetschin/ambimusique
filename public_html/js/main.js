@@ -42,3 +42,22 @@ $(document).ready(function(){
 		root.append(result).listview();
 	});
 });
+function before(){
+    apiCall('previous', function(json,success){
+		$('#musicTitle').html(json.musicTitle);
+		$('#musicStatus').removeClass('stoped playing paused').addClass(json.musicStatus);
+                
+	});
+}
+function playing(){
+    apiCall('toggle', function(json,success){
+		$('#musicTitle').html(json.musicTitle);
+		$('#musicStatus').removeClass('stoped playing paused').addClass(json.musicStatus);
+	});
+}
+function next(){
+    apiCall("next", function(json,success){
+		$('#musicTitle').html(json.musicTitle);
+		$('#musicStatus').removeClass('stoped playing paused').addClass(json.musicStatus);
+	});
+}
