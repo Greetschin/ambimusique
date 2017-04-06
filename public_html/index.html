@@ -15,19 +15,27 @@ and open the template in the editor.
     </head>
     <body>
         <div data-role="page" id="page1">
-        	<div data-role="header" style="overflow:hidden;">
-				<h1>Page 1</h1>
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#" class="ui-btn-active">One</a></li>
-						<li><a href="#page2">Two</a></li>
-						<li><a href="#page3">Three</a></li>
-					</ul>
-				</div>
-			</div>
+            <div data-role="header" style="overflow:hidden;">
+                <h1>Page 1</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active">One</a></li>
+                        <li><a href="#page2">Two</a></li>
+                        <li><a href="#page3">Three</a></li>
+                    </ul>
+                </div>
+            </div>
             <div role="main" class="ui-content">
                 <center>
-                    page 1
+                    <div style="background-color: blue">
+                        <img style="width: 100px ; height: 100px ; align-content: center" src="img/albumdefault.jpg" alt=""/>
+                    </div>
+                    <div style="background-color: pink">
+                        <h2>Titre de la musique LOL</h2>
+                        <button class="ui-btn ui-btn-inline" onclick="alert('BEFORE')">Before</button>
+                        <button class="ui-btn ui-btn-inline" onclick="alert('Play')">Play</button>
+                        <button class="ui-btn ui-btn-inline" onclick="alert('AFTER')">After</button>
+                    </div>
                 </center>
             </div>
             <div data-role="footer" data-position="fixed">
@@ -37,18 +45,22 @@ and open the template in the editor.
 
         <div data-role="page" id="page2">
             <div data-role="header" style="overflow:hidden;">
-				<h1>Page 2</h1>
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#page1">One</a></li>
-						<li><a href="#" class="ui-btn-active">Two</a></li>
-						<li><a href="#page3">Three</a></li>
-					</ul>
-				</div>
-			</div>
+                <h1>Page 2</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1">One</a></li>
+                        <li><a href="#" class="ui-btn-active">Two</a></li>
+                        <li><a href="#page3">Three</a></li>
+                    </ul>
+                </div>
+            </div>
             <div role="main" class="ui-content">
                 <center>
-                    page 2
+                    <nav>Mes Musiques</nav>
+                    <button class="ui-btn ui-btn-inline">Titre</button>
+                    <button class="ui-btn ui-btn-inline">Genre</button>
+                    <button class="ui-btn ui-btn-inline">Artiste</button>
+
                 </center>
             </div>
             <div data-role="footer" data-position="fixed">
@@ -56,19 +68,25 @@ and open the template in the editor.
             </div>
         </div>
         <div data-role="page" id="page3">
-			<div data-role="header" style="overflow:hidden;">
-				<h1>Page 3</h1>
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#page1">One</a></li>
-						<li><a href="#page2">Two</a></li>
-						<li><a href="#" class="ui-btn-active">Three</a></li>
-					</ul>
-				</div>
-			</div>
+            <div data-role="header" style="overflow:hidden;">
+                <h1>Page 3</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1">One</a></li>
+                        <li><a href="#page2">Two</a></li>
+                        <li><a href="#" class="ui-btn-active">Three</a></li>
+                    </ul>
+                </div>
+            </div>
             <div role="main" class="ui-content">
                 <center>
-                    page 3
+                    <div>
+                        <label for="slider2">Sycronisation</label>
+                        <button class="ui-btn ui-shadow">Google Musique</button>
+                        <button class="ui-btn ui-shadow">Spotify</button>
+                        <button class="ui-btn ui-shadow">Deezer</button>
+                    </div>
+
                 </center>
             </div>
             <div data-role="footer" data-position="fixed">
@@ -76,24 +94,24 @@ and open the template in the editor.
             </div>
         </div>
         <script>
-		$(document).ready(function(){
+            $(document).ready(function () {
 
-				$.ajax({
+                $.ajax({
 
-					url : 'http://192.168.43.233:8080/info', // La ressource ciblée
-					type : 'GET', // Le type de la requête HTTP.
-					dataType : 'json',
-					success : function(json, statut){ // success est toujours en place, bien sûr !
-						console.log(json);
-						console.log(statut);
-					},
-					error : function(resultat, statut, erreur){
-						console.log(resultat);
-						console.log(statut);
-						console.log(erreur);
-					}
-				});
-			});
-		</script>
+                    url: 'http://192.168.43.233:8080/info', // La ressource ciblée
+                    type: 'GET', // Le type de la requête HTTP.
+                    dataType: 'json',
+                    success: function (json, statut) { // success est toujours en place, bien sûr !
+                        console.log(json);
+                        console.log(statut);
+                    },
+                    error: function (resultat, statut, erreur) {
+                        console.log(resultat);
+                        console.log(statut);
+                        console.log(erreur);
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
