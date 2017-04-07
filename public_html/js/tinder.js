@@ -10,7 +10,7 @@ $(function(){
        apiCall("next", function (json, success) {
            $('#musicTitle').html(json.musicTitle);
            $('#musicStatus').removeClass('stopped playing paused').addClass(json.musicStatus);
-           $('#musicImage').attr("src","img/"+json.musicTitle.replace(".mp3",".png"))
+           $('#musicImage').attr("src","192.168.43.233/img/"+ json.musicTitle.replace(".mp3",".png"))
        });
        AlertDislike.alert()
     })
