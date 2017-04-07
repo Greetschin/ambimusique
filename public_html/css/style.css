@@ -3,7 +3,7 @@
 	background-size: cover;
 	width: 60px;
 	height: 60px;
-	filter: invert(20%);
+	filter: invert(60%);
 }
 
 .icon-player.before {background-position: 0% 0;}
