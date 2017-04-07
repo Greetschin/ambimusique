@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 	apiCall('info',
 	function(json,success){
-		$('#musicImage').attr("src","192.168.43.233/img/"+ json.musicTitle.replace(".mp3",".png"))
+		$('#musicImage').attr("src","192.168.43.233/img/"+ json.musicTitle.replace(".mp3",".png"));
 		$('#musicTitle').html(json.musicTitle);
 		$('#musicStatus').removeClass('playing paused stopped').addClass(json.musicStatus);
 	},
